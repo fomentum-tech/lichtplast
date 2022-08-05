@@ -1,14 +1,85 @@
 import styled from "styled-components";
 
 export const Hero = styled.div`
-  /* width: 100%;
+  width: 100%;
   height: 760px;
-  position: absolute; */
+  position: relative;
+  display: flex;
+
+  .swiper-slider {
+    position: absolute;
+  }
+`;
+
+export const HeroContainer = styled.div`
+  width: 100%;
+  margin: 51px 0 71px;
+  z-index: 100;
+  position: absolute;
+`;
+
+export const HeroWrapper = styled.div`
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media (min-width: 1900px) {
+    max-width: 1440px;
+  }
+
+  p {
+    margin: 210px 0 226px;
+    width: 570px;
+    font-family: "Nexa";
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 57px;
+    text-transform: uppercase;
+
+    color: var(--white);
+  }
+`;
+
+export const HeroHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 250px;
+    height: 31.74px;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style-type: none;
+
+        & + li {
+          margin-left: 28px;
+        }
+
+        a {
+          font-family: "Baloo 2";
+          font-weight: 600;
+          font-size: 22px;
+          text-transform: uppercase;
+
+          color: var(--white);
+        }
+      }
+    }
+  }
 `;
 
 export const HeroBg = styled.div`
-  /*  position: relative;
+  width: 100%;
   height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
   background: linear-gradient(
       0deg,
       rgba(17, 69, 108, 0.6),
@@ -17,7 +88,21 @@ export const HeroBg = styled.div`
     url(${(props) => props.bg});
   background-repeat: no-repeat;
   background-position: 100% 100%;
-  background-size: cover; */
+  background-size: cover;
+`;
+
+export const HeroDetails = styled.div`
+  width: 100%;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 0 2px 2px 0;
+
+  div {
+    border-radius: 2px 0 0 2px;
+    width: 85%;
+    height: 100%;
+    background: var(--white);
+  }
 `;
 
 export const Main = styled.main`
@@ -126,12 +211,13 @@ export const ValuesWrapper = styled.div`
 
 export const ValuesCards = styled.div`
   margin-top: 28px;
-  display: flex;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
   justify-content: space-between;
 `;
 
 export const ValuesCard = styled.div`
-  width: 25%;
   min-height: 169px;
   position: relative;
 
@@ -176,6 +262,7 @@ export const ValuesCardIcon = styled.div`
   position: absolute;
   right: -30px;
   top: -50px;
+  z-index: 2;
 
   img {
     width: 26px;
@@ -239,7 +326,138 @@ export const EnterpriseContent = styled.div`
   }
 `;
 
-export const Contact = styled.section``;
+export const Contact = styled.section`
+  width: 90%;
+  max-width: 1120px;
+  margin: 165px auto 0;
+
+  display: flex;
+
+  @media (min-width: 1900px) {
+    max-width: 1440px;
+  }
+`;
+
+export const ContactInfo = styled.div`
+  width: 41.67%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 122.5px 46px 122.5px 52px;
+
+  background: var(--cyan-lgt);
+
+  h2 {
+    font-family: "Nexa";
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+
+    color: var(--cyan-dark);
+  }
+
+  p {
+    margin: 13px 0 38px;
+    font-family: "Graphik";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+
+    color: var(--gray-text);
+  }
+
+  a {
+    font-family: "Graphik";
+    font-weight: 600;
+    font-size: 18px;
+
+    color: var(--blue);
+  }
+`;
+
+export const ContactForm = styled.form`
+  width: 58.33%;
+  background: var(--cyan-dark);
+  border-radius: 0px 5px 5px 0px;
+  padding: 64px 59.5px;
+
+  > div {
+    label {
+      margin-bottom: 16px;
+      font-family: "Graphik";
+      font-weight: 600;
+      font-size: 18px;
+
+      color: var(--white);
+    }
+
+    input,
+    textarea {
+      padding: 15px 16px;
+
+      font-family: "Graphik";
+      font-weight: 400;
+      font-size: 18px;
+
+      outline: none;
+      background: none;
+      border: 2px solid var(--white);
+      border-radius: 2px;
+
+      color: var(--cyan-lgt);
+
+      &::placeholder {
+        color: var(--cyan-lgt);
+      }
+    }
+
+    button {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+
+      padding: 15.4px 0;
+
+      font-family: "Graphik";
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: uppercase;
+
+      color: var(--blue);
+
+      border: none;
+      background: var(--white);
+      box-shadow: 0px 4px 15px rgba(19, 26, 120, 0.2);
+      border-radius: 2px;
+    }
+  }
+`;
+
+export const ContactFormGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const ContactFormMessage = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 26px 0;
+
+  textarea {
+    resize: none;
+    line-height: 18px;
+  }
+`;
 
 export const Footer = styled.footer`
   width: 100%;

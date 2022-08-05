@@ -3,10 +3,16 @@
 import Head from "next/head";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
+
 import "swiper/css";
 
 import {
   Hero,
+  HeroContainer,
+  HeroWrapper,
+  HeroHeader,
+  HeroDetails,
   HeroBg,
   Main,
   About,
@@ -23,9 +29,15 @@ import {
   Footer,
   FooterWrapper,
   FooterContent,
+  ContactInfo,
+  ContactForm,
+  ContactFormMessage,
+  ContactFormGroup,
 } from "../styles/styles";
 
 export default function Home() {
+  SwiperCore.use([Autoplay]);
+
   return (
     <>
       <Head>
@@ -39,10 +51,44 @@ export default function Home() {
       </Head>
 
       <Hero>
-        <header></header>
-        <h1></h1>
-        <HeroBg bg="/images/slider-01.jpg" />
-        <HeroBg bg="/images/slider-02.jpg" />
+        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 6000 }}>
+          <SwiperSlide>
+            <HeroBg bg="/images/slider-01.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <HeroBg bg="/images/slider-02.jpg" />
+          </SwiperSlide>
+        </Swiper>
+
+        <HeroContainer>
+          <HeroWrapper>
+            <HeroHeader>
+              <img src="/images/logo.png" alt="lichtplast" />
+
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#">Serviços</a>
+                  </li>
+
+                  <li>
+                    <a href="#">A Empresa</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Contato</a>
+                  </li>
+                </ul>
+              </nav>
+            </HeroHeader>
+
+            <p>Mais de 28 anos de experiência em soluções termóplasticas</p>
+
+            <HeroDetails>
+              <div></div>
+            </HeroDetails>
+          </HeroWrapper>
+        </HeroContainer>
       </Hero>
 
       <Main>
@@ -159,7 +205,48 @@ export default function Home() {
           </EnterpriseContent>
         </Enterprise>
 
-        <Contact></Contact>
+        <Contact>
+          <ContactInfo>
+            <h2>Entre em contato</h2>
+
+            <p>
+              Você também pode entrar em contato conosco através do nosso email
+              para tirar suas dúvidas, solicitar catálogos ou orçamentos
+            </p>
+
+            <a href="mailto:contato@lichtplast.com.br">
+              contato@lichtplast.com.br
+            </a>
+          </ContactInfo>
+
+          <ContactForm>
+            <div>
+              <ContactFormGroup>
+                <div>
+                  <label htmlFor="name">Seu Nome</label>
+                  <input type="text" placeholder="Digite seu nome" id="name" />
+                </div>
+
+                <div>
+                  <label htmlFor="email">Seu email</label>
+                  <input type="email" placeholder="nome@email.com" id="email" />
+                </div>
+              </ContactFormGroup>
+
+              <ContactFormMessage>
+                <label htmlFor="message">Mensagem</label>
+                <textarea
+                  placeholder="Sua mensagem"
+                  id="message"
+                  rows="6"
+                  maxLength="700"
+                ></textarea>
+              </ContactFormMessage>
+
+              <button type="submit">Enviar</button>
+            </div>
+          </ContactForm>
+        </Contact>
       </Main>
 
       <Footer>
