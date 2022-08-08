@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
   --black: #000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 button {
   cursor: pointer;
 }
@@ -55,11 +59,11 @@ a {
   font-display: swap;
 }
 `;
-
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
+
       <Component {...pageProps} />
     </>
   );

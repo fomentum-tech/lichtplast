@@ -2,10 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay } from "swiper";
-
-import "swiper/css";
+import { Link } from "react-scroll";
 
 import {
   Hero,
@@ -30,20 +27,29 @@ import {
   FooterWrapper,
   FooterContent,
   ContactInfo,
-  ContactForm,
-  ContactFormMessage,
-  ContactFormGroup,
 } from "../styles/styles";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
+
+import "swiper/css";
+
+import ContactForm from "../components/FormContact/ContactForm";
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
+  console.log(HeroBg);
 
   return (
     <>
       <Head>
         <title>Lichtplast</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap"
           rel="stylesheet"
@@ -53,10 +59,11 @@ export default function Home() {
       <Hero>
         <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 6000 }}>
           <SwiperSlide>
-            <HeroBg bg="/images/slider-01.jpg" />
+            <HeroBg bg="/images/bg-01.jpg" />
           </SwiperSlide>
+
           <SwiperSlide>
-            <HeroBg bg="/images/slider-02.jpg" />
+            <HeroBg bg="/images/bg-02.jpg" />
           </SwiperSlide>
         </Swiper>
 
@@ -68,15 +75,31 @@ export default function Home() {
               <nav>
                 <ul>
                   <li>
-                    <a href="#">Serviços</a>
+                    <Link to="services" smooth={true} duration={200}>
+                      Serviços
+                    </Link>
                   </li>
 
                   <li>
-                    <a href="#">A Empresa</a>
+                    <Link
+                      to="enterprise"
+                      smooth={true}
+                      duration={300}
+                      offset={-100}
+                    >
+                      A Empresa
+                    </Link>
                   </li>
 
                   <li>
-                    <a href="#">Contato</a>
+                    <Link
+                      to="contact"
+                      smooth={true}
+                      duration={400}
+                      offset={-100}
+                    >
+                      Contato
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -186,7 +209,7 @@ export default function Home() {
           </ValuesWrapper>
         </Values>
 
-        <Enterprise>
+        <Enterprise id="enterprise">
           <img src="/images/enterprise-image.jpg" alt="machines" />
           <EnterpriseContent>
             <h2>A Empresa</h2>
@@ -205,7 +228,7 @@ export default function Home() {
           </EnterpriseContent>
         </Enterprise>
 
-        <Contact>
+        <Contact id="contact">
           <ContactInfo>
             <h2>Entre em contato</h2>
 
@@ -219,33 +242,7 @@ export default function Home() {
             </a>
           </ContactInfo>
 
-          <ContactForm>
-            <div>
-              <ContactFormGroup>
-                <div>
-                  <label htmlFor="name">Seu Nome</label>
-                  <input type="text" placeholder="Digite seu nome" id="name" />
-                </div>
-
-                <div>
-                  <label htmlFor="email">Seu email</label>
-                  <input type="email" placeholder="nome@email.com" id="email" />
-                </div>
-              </ContactFormGroup>
-
-              <ContactFormMessage>
-                <label htmlFor="message">Mensagem</label>
-                <textarea
-                  placeholder="Sua mensagem"
-                  id="message"
-                  rows="6"
-                  maxLength="700"
-                ></textarea>
-              </ContactFormMessage>
-
-              <button type="submit">Enviar</button>
-            </div>
-          </ContactForm>
+          <ContactForm />
         </Contact>
       </Main>
 
@@ -255,7 +252,6 @@ export default function Home() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.9839379900322!2d-46.51617798448248!3d-22.95081864521492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceb79fdd8c7e4d%3A0x8b568c5128c71fc2!2sLichtPlast%20Ind%20e%20Com%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1659723142091!5m2!1spt-BR!2sbr"
             allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
           />
           <FooterContent>
             <div>
@@ -267,7 +263,9 @@ export default function Home() {
                 R. Azuma - Centro Industrial Rafael Diniz Bragança Paulista -
                 SP, 12919-586
               </p>
-              <a href="#">fomentum.studio</a>
+              <a href="https://website-jcce81s9q-fomentum-tech.vercel.app/">
+                fomentum.studio
+              </a>
             </div>
           </FooterContent>
         </FooterWrapper>

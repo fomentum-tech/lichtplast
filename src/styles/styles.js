@@ -65,6 +65,7 @@ export const HeroHeader = styled.header`
           font-weight: 600;
           font-size: 22px;
           text-transform: uppercase;
+          cursor: pointer;
 
           color: var(--white);
         }
@@ -76,9 +77,6 @@ export const HeroHeader = styled.header`
 export const HeroBg = styled.div`
   width: 100%;
   height: 100%;
-  z-index: 1;
-  top: 0;
-  left: 0;
 
   background: linear-gradient(
       0deg,
@@ -87,7 +85,7 @@ export const HeroBg = styled.div`
     ),
     url(${(props) => props.bg});
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: center center;
   background-size: cover;
 `;
 
@@ -215,11 +213,17 @@ export const ValuesCards = styled.div`
   column-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
   justify-content: space-between;
+
+  @media (max-width: 1120px) {
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  }
 `;
 
 export const ValuesCard = styled.div`
   min-height: 169px;
   position: relative;
+  overflow: hidden;
 
   & + div {
     margin-left: 20px;
@@ -252,16 +256,14 @@ export const ValuesCard = styled.div`
   }
 `;
 
-// Ajeitar icones
-
 export const ValuesCardIcon = styled.div`
   width: 63px;
   height: 63px;
   border-radius: 50%;
   background: var(--cyan-dark);
   position: absolute;
-  right: -30px;
-  top: -50px;
+  right: -38px;
+  top: -46px;
   z-index: 2;
 
   img {
@@ -275,15 +277,22 @@ export const Enterprise = styled.section`
   width: 100%;
   display: flex;
 
-  img {
-    width: 56%;
+  @media (max-width: 1120px) {
+    flex-direction: column;
   }
 
-  /* @media (min-width: 1900px) {
-    img {
-      height: 600px;
+  img {
+    width: 56%;
+
+    @media (max-width: 1120px) {
+      width: 100%;
+      height: 500px;
     }
-  } */
+
+    @media (max-width: 768px) {
+      height: 350px;
+    }
+  }
 `;
 
 export const EnterpriseContent = styled.div`
@@ -291,6 +300,10 @@ export const EnterpriseContent = styled.div`
   padding: 75.5px 60.5px;
 
   background: var(--cyan-dark);
+
+  @media (max-width: 1120px) {
+    width: 100%;
+  }
 
   h2 {
     margin-bottom: 18px;
@@ -336,6 +349,10 @@ export const Contact = styled.section`
   @media (min-width: 1900px) {
     max-width: 1440px;
   }
+
+  @media (max-width: 1120px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContactInfo = styled.div`
@@ -349,6 +366,10 @@ export const ContactInfo = styled.div`
   padding: 122.5px 46px 122.5px 52px;
 
   background: var(--cyan-lgt);
+
+  @media (max-width: 1120px) {
+    width: 100%;
+  }
 
   h2 {
     font-family: "Nexa";
@@ -378,92 +399,10 @@ export const ContactInfo = styled.div`
   }
 `;
 
-export const ContactForm = styled.form`
-  width: 58.33%;
-  background: var(--cyan-dark);
-  border-radius: 0px 5px 5px 0px;
-  padding: 64px 59.5px;
-
-  > div {
-    label {
-      margin-bottom: 16px;
-      font-family: "Graphik";
-      font-weight: 600;
-      font-size: 18px;
-
-      color: var(--white);
-    }
-
-    input,
-    textarea {
-      padding: 15px 16px;
-
-      font-family: "Graphik";
-      font-weight: 400;
-      font-size: 18px;
-
-      outline: none;
-      background: none;
-      border: 2px solid var(--white);
-      border-radius: 2px;
-
-      color: var(--cyan-lgt);
-
-      &::placeholder {
-        color: var(--cyan-lgt);
-      }
-    }
-
-    button {
-      width: 100%;
-
-      display: flex;
-      justify-content: center;
-
-      padding: 15.4px 0;
-
-      font-family: "Graphik";
-      font-weight: 600;
-      font-size: 18px;
-      text-transform: uppercase;
-
-      color: var(--blue);
-
-      border: none;
-      background: var(--white);
-      box-shadow: 0px 4px 15px rgba(19, 26, 120, 0.2);
-      border-radius: 2px;
-    }
-  }
-`;
-
-export const ContactFormGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  > div {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-export const ContactFormMessage = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 26px 0;
-
-  textarea {
-    resize: none;
-    line-height: 18px;
-  }
-`;
-
 export const Footer = styled.footer`
   width: 100%;
 
   position: absolute;
-  margin-top: 304px;
 
   background: var(--cyan-dark);
 `;
