@@ -1,15 +1,13 @@
-/* eslint-disable @next/next/no-page-custom-font */
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-
-import { Link } from "react-scroll";
 
 import {
   Hero,
   HeroContainer,
   HeroWrapper,
   HeroHeader,
+  HeroContent,
   HeroDetails,
+  Menu,
   HeroBg,
   Main,
   About,
@@ -23,22 +21,23 @@ import {
   Enterprise,
   EnterpriseContent,
   Contact,
+  ContactInfo,
   Footer,
   FooterWrapper,
   FooterContent,
-  ContactInfo,
 } from "../styles/styles";
+
+import ContactForm from "../components/FormContact";
+import { MenuMobile } from "../components/MenuMobile";
+
+import { Link } from "react-scroll";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
-
 import "swiper/css";
-
-import ContactForm from "../components/FormContact/ContactForm";
 
 export default function Home() {
   SwiperCore.use([Autoplay]);
-  console.log(HeroBg);
 
   return (
     <>
@@ -57,7 +56,12 @@ export default function Home() {
       </Head>
 
       <Hero>
-        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 6000 }}>
+        <Swiper
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 6000 }}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
           <SwiperSlide>
             <HeroBg bg="/images/bg-01.jpg" />
           </SwiperSlide>
@@ -72,7 +76,8 @@ export default function Home() {
             <HeroHeader>
               <img src="/images/logo.png" alt="lichtplast" />
 
-              <nav>
+              {/* <MenuMobile /> */}
+              <Menu>
                 <ul>
                   <li>
                     <Link to="services" smooth={true} duration={200}>
@@ -102,15 +107,16 @@ export default function Home() {
                     </Link>
                   </li>
                 </ul>
-              </nav>
+              </Menu>
             </HeroHeader>
 
-            <p>Mais de 28 anos de experiência em soluções termóplasticas</p>
-
-            <HeroDetails>
-              <div></div>
-            </HeroDetails>
+            <HeroContent>
+              <p>Mais de 28 anos de experiência em soluções termóplasticas</p>
+            </HeroContent>
           </HeroWrapper>
+          <HeroDetails>
+            <div></div>
+          </HeroDetails>
         </HeroContainer>
       </Hero>
 
@@ -129,24 +135,13 @@ export default function Home() {
           </AboutContent>
           <AboutImages>
             <div>
-              <img
-                src="/images/about-image-01.jpg"
-                alt=""
-                width="277px"
-                height="262px"
-              />
-              <img
-                src="/images/about-image-02.jpg"
-                alt=""
-                width="277px"
-                height="183px"
-              />
+              <img src="/images/about-image-01.jpg" alt="" />
+              <img src="/images/about-image-02.jpg" alt="" />
             </div>
             <img
               src="/images/about-image-03.jpg"
               alt=""
-              width="210px"
-              height="471px"
+              className="about-image-03"
             />
           </AboutImages>
         </About>
@@ -252,7 +247,8 @@ export default function Home() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.9839379900322!2d-46.51617798448248!3d-22.95081864521492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceb79fdd8c7e4d%3A0x8b568c5128c71fc2!2sLichtPlast%20Ind%20e%20Com%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1659723142091!5m2!1spt-BR!2sbr"
             allowFullScreen=""
             loading="lazy"
-          />
+          ></iframe>
+
           <FooterContent>
             <div>
               <img src="/images/logo.png" alt="lichtplast" />

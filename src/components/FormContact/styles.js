@@ -3,11 +3,16 @@ import styled from "styled-components";
 export const Form = styled.form`
   width: 58.33%;
   background: var(--cyan-dark);
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0 5px 5px 0;
   padding: 64px 59.5px;
 
   @media (max-width: 1120px) {
     width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
   }
 
   > div {
