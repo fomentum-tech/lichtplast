@@ -14,6 +14,10 @@ export const Hero = styled.div`
   .swiper-slider {
     position: absolute;
   }
+
+  @media (max-width: 768px) {
+    min-height: 70vh;
+  }
 `;
 
 export const HeroContainer = styled.div`
@@ -59,6 +63,11 @@ export const HeroHeader = styled.header`
 
   @media (max-width: 768px) {
     margin-bottom: 0;
+  }
+
+  img {
+    width: 250px;
+    height: 31.74px;
   }
 `;
 
@@ -117,7 +126,7 @@ export const HeroContent = styled.div`
 export const HeroDetails = styled.div`
   width: 90%;
   max-width: 1120px;
-  margin: 0 5.8%;
+  margin: 0 5%;
   height: 3px;
   background: var(--blue);
   border-radius: 0 2px 2px 0;
@@ -303,7 +312,7 @@ export const ValuesCards = styled.div`
   margin-top: 28px;
   display: grid;
   column-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(256px, 256px));
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   justify-content: space-between;
 
   @media (max-width: 1240px) {
@@ -462,7 +471,7 @@ export const ContactInfo = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 20px 15px;
+    padding: 30px;
   }
 
   h2 {
@@ -504,6 +513,14 @@ export const Footer = styled.footer`
   padding-bottom: 81px;
 
   background: var(--cyan-dark);
+
+  @media (max-width: 1120px) {
+    margin-top: 250px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 250px;
+  }
 `;
 
 export const FooterWrapper = styled.div`

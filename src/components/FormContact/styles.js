@@ -12,7 +12,7 @@ export const Form = styled.form`
   }
 
   @media (max-width: 768px) {
-    padding: 20px 15px;
+    padding: 30px;
   }
 
   > div {
@@ -74,13 +74,6 @@ export const Form = styled.form`
       font-size: 12px;
     }
   }
-
-  .toast-container {
-    padding: 10px;
-    border: 2px solid var(--cyan-lgt);
-    background: var(--cyan-dark);
-    color: var(--white);
-  }
 `;
 
 export const FormGroup = styled.div`
@@ -97,9 +90,14 @@ export const FormGroup = styled.div`
     display: flex;
     flex-direction: column;
 
+    &:last-child {
+      @media (max-width: 768px) {
+        margin-top: 20px;
+      }
+    }
+
     @media (max-width: 768px) {
       width: 100%;
-      margin-top: 20px;
     }
   }
 `;

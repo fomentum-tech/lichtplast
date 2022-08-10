@@ -56,12 +56,7 @@ export default function Home() {
       </Head>
 
       <Hero>
-        <Swiper
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 6000 }}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
+        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 6000 }}>
           <SwiperSlide>
             <HeroBg bg="/images/bg-01.jpg" />
           </SwiperSlide>
@@ -72,11 +67,11 @@ export default function Home() {
         </Swiper>
 
         <HeroContainer>
+          {/* <MenuMobile /> */}
           <HeroWrapper>
             <HeroHeader>
               <img src="/images/logo.png" alt="lichtplast" />
 
-              {/* <MenuMobile /> */}
               <Menu>
                 <ul>
                   <li>
