@@ -35,24 +35,11 @@ export const HeroWrapper = styled.div`
 
   margin: 57px auto 0;
 
-  @media (min-width: 1900px) {
-    max-width: 1440px;
-  }
-
-  p {
-    max-width: 570px;
-    font-family: "Nexa";
-    font-weight: 900;
-    font-size: 38px;
-    line-height: 57px;
-    text-transform: uppercase;
-
-    color: var(--white);
-
-    @media (max-width: 768px) {
-      font-size: 28px;
-      line-height: 37px;
-    }
+  @media (max-width: 768px) {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 `;
 
@@ -117,22 +104,45 @@ export const HeroBg = styled.div`
 
 export const HeroContent = styled.div`
   width: 100%;
+  max-width: 570px;
 
   @media (max-width: 768px) {
-    margin: 100px 0 0 0;
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  p {
+    font-family: "Nexa";
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 57px;
+    text-transform: uppercase;
+
+    color: var(--white);
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 37px;
+    }
   }
 `;
 
 export const HeroDetails = styled.div`
   width: 90%;
   max-width: 1120px;
-  margin: 0 5%;
   height: 3px;
   background: var(--blue);
   border-radius: 0 2px 2px 0;
 
   position: absolute;
   bottom: 71px;
+
+  @media (max-width: 768px) {
+    position: initial;
+    bottom: 0;
+    width: 100%;
+  }
 
   div {
     border-radius: 2px 0 0 2px;
@@ -180,13 +190,14 @@ export const AboutContent = styled.div`
     font-weight: 900;
     font-size: 38px;
 
-    align-self: center;
-
     color: var(--gray-title);
+
+    @media (max-width: 1120px) {
+      max-width: 300px;
+    }
 
     img {
       margin-top: 10px;
-      display: block;
       width: 250px;
       height: 31.74px;
     }
@@ -293,10 +304,6 @@ export const ValuesWrapper = styled.div`
   max-width: 1120px;
 
   margin: 0 auto;
-
-  @media (min-width: 1900px) {
-    max-width: 1440px;
-  }
 
   h2 {
     font-family: "Nexa";
@@ -443,10 +450,6 @@ export const Contact = styled.section`
 
   display: flex;
 
-  @media (min-width: 1900px) {
-    max-width: 1440px;
-  }
-
   @media (max-width: 1120px) {
     flex-direction: column;
   }
@@ -519,7 +522,7 @@ export const Footer = styled.footer`
   }
 
   @media (max-width: 768px) {
-    margin-top: 250px;
+    margin-top: 200px;
   }
 `;
 

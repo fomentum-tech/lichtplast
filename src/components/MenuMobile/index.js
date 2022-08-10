@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from "react-scroll";
 
 import { useState } from "react";
@@ -9,33 +9,50 @@ export function MenuMobile() {
   const [active, setMode] = useState(false);
 
   const ToggleMode = () => {
-    console.log("Clicou");
     setMode(!active);
   };
 
   return (
-    <Container>
-      <IoClose
-        size={45}
-        className={active ? "icon iconActive" : "icon"}
-        onClick={ToggleMode}
-      />
+    <Container className={active ? "icon iconActive" : "icon"}>
+      {active ? (
+        <IoClose size={45} onClick={ToggleMode} />
+      ) : (
+        <IoMenu size={45} onClick={ToggleMode} />
+      )}
+
       <nav className={active ? "menu menuOpen" : "menu menuClose"}>
         <ul>
           <li>
-            <Link to="services" smooth={true} duration={200}>
+            <Link
+              to="services"
+              smooth={true}
+              duration={200}
+              onClick={ToggleMode}
+            >
               Serviços
             </Link>
           </li>
 
           <li>
-            <Link to="enterprise" smooth={true} duration={300} offset={-100}>
+            <Link
+              to="enterprise"
+              smooth={true}
+              duration={300}
+              offset={-100}
+              onClick={ToggleMode}
+            >
               A Empresa
             </Link>
           </li>
 
           <li>
-            <Link to="contact" smooth={true} duration={400} offset={-100}>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={400}
+              offset={-100}
+              onClick={ToggleMode}
+            >
               Contato
             </Link>
           </li>

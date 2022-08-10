@@ -55,6 +55,8 @@ export default function Home() {
         />
       </Head>
 
+      <MenuMobile />
+
       <Hero>
         <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 6000 }}>
           <SwiperSlide>
@@ -67,7 +69,6 @@ export default function Home() {
         </Swiper>
 
         <HeroContainer>
-          {/* <MenuMobile /> */}
           <HeroWrapper>
             <HeroHeader>
               <img src="/images/logo.png" alt="lichtplast" />
@@ -108,10 +109,10 @@ export default function Home() {
             <HeroContent>
               <p>Mais de 28 anos de experiência em soluções termóplasticas</p>
             </HeroContent>
+            <HeroDetails>
+              <div></div>
+            </HeroDetails>
           </HeroWrapper>
-          <HeroDetails>
-            <div></div>
-          </HeroDetails>
         </HeroContainer>
       </Hero>
 
