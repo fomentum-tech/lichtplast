@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: absolute;
-
+  height: 100vh;
   width: 100vw;
-  min-height: 100vh;
-  max-width: 100vw;
   display: none;
   z-index: 1000;
 
+  transition: all 0.8s;
+
   @media (max-width: 899px) {
-    display: initial;
+    display: inherit;
   }
 
   svg {
@@ -24,26 +24,33 @@ export const Container = styled.div`
   }
 
   nav {
-    display: none;
-    width: 90%;
-    margin: 150px auto 0;
+    height: 100vh;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    padding: 150px 15px 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: var(--cyan-dark);
 
     ul {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       align-items: flex-end;
+      text-align: center;
 
       li {
+        width: 100%;
         list-style-type: none;
-        border-bottom: 1px solid var(--white);
-
         & + li {
           margin-top: 40px;
         }
 
         a {
+          text-align: end;
           font-family: "Baloo 2";
           font-weight: 600;
           font-size: 28px;
