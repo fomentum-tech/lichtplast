@@ -76,12 +76,6 @@ export default function Home() {
               <Menu>
                 <ul>
                   <li>
-                    <Link to="services" smooth={true} duration={200}>
-                      Serviços
-                    </Link>
-                  </li>
-
-                  <li>
                     <Link
                       to="enterprise"
                       smooth={true}
@@ -127,7 +121,15 @@ export default function Home() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci
               nulla pellentesque dignissim enim sit amet venenatis urna.
             </p>
-            <button type="button">Fale Conosco</button>
+            <Link
+              type="button"
+              to="contact"
+              smooth={true}
+              duration={400}
+              offset={-50}
+            >
+              Fale Conosco
+            </Link>
           </AboutContent>
           <AboutImages>
             <div>

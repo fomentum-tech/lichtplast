@@ -14,10 +14,6 @@ export const Hero = styled.div`
   .swiper-slider {
     position: absolute;
   }
-
-  @media (max-width: 768px) {
-    min-height: 70vh;
-  }
 `;
 
 export const HeroContainer = styled.div`
@@ -108,8 +104,6 @@ export const HeroContent = styled.div`
 
   @media (max-width: 768px) {
     max-width: 100%;
-
-    text-align: center;
   }
 
   p {
@@ -140,7 +134,7 @@ export const HeroDetails = styled.div`
 
   @media (max-width: 768px) {
     position: initial;
-    bottom: 0;
+    margin-bottom: -90px;
     width: 100%;
   }
 
@@ -213,7 +207,7 @@ export const AboutContent = styled.div`
     color: var(--gray-text);
   }
 
-  button {
+  a {
     max-width: 202.12px;
     padding: 11px 42px;
 
@@ -227,6 +221,7 @@ export const AboutContent = styled.div`
 
     background: var(--cyan-dark);
     color: var(--white);
+    cursor: pointer;
   }
 `;
 
