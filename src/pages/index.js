@@ -71,7 +71,7 @@ export default function Home() {
         <HeroContainer>
           <HeroWrapper>
             <HeroHeader>
-              <img src="/images/logo.png" alt="lichtplast" />
+              <img src="/images/logo.svg" alt="lichtplast" />
 
               <Menu>
                 <ul>
@@ -114,7 +114,7 @@ export default function Home() {
         <About>
           <AboutContent>
             <h1>
-              Nós somos a <img src="/images/logo-dark.png" alt="lichtplast" />
+              Nós somos a <img src="/images/logo-dark.svg" alt="lichtplast" />
             </h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -150,7 +150,7 @@ export default function Home() {
             <ValuesCards>
               <ValuesCard>
                 <ValuesCardIcon>
-                  <img src="/images/icon-business.png" alt="icon business" />
+                  <img src="/images/icon-business.svg" alt="icon business" />
                 </ValuesCardIcon>
                 <div>
                   <strong>Atuação</strong>
@@ -163,7 +163,7 @@ export default function Home() {
 
               <ValuesCard>
                 <ValuesCardIcon>
-                  <img src="/images/icon-trophy.png" alt="icon trophy" />
+                  <img src="/images/icon-trophy.svg" alt="icon trophy" />
                 </ValuesCardIcon>
                 <div>
                   <strong>Compromisso</strong>
@@ -176,7 +176,7 @@ export default function Home() {
 
               <ValuesCard>
                 <ValuesCardIcon>
-                  <img src="/images/icon-gear.png" alt="icon gear" />
+                  <img src="/images/icon-gear.svg" alt="icon gear" />
                 </ValuesCardIcon>
                 <div>
                   <strong>Produção</strong>
@@ -249,7 +249,7 @@ export default function Home() {
 
           <FooterContent>
             <div>
-              <img src="/images/logo.png" alt="lichtplast" />
+              <img src="/images/logo.svg" alt="lichtplast" />
               <strong>(11) 4035 0379</strong>
             </div>
             <div>
