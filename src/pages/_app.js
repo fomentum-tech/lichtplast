@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import FontsStyles from "../styles/fonts";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -35,35 +36,13 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: "Nexa";
-  src: url("/fonts/NexaBlack.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Graphik";
-  src: url("/fonts/GraphikRegular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Graphik";
-  src: url("/fonts/GraphikSemibold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 `;
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-
+      <FontsStyles />
       <Component {...pageProps} />
     </>
   );
