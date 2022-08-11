@@ -402,6 +402,7 @@ export const EnterpriseContent = styled.div`
     font-family: "Nexa";
     font-weight: 900;
     font-size: 32px;
+    text-transform: uppercase;
 
     color: var(--white);
   }
