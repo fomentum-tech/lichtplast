@@ -276,26 +276,14 @@ export const AboutImages = styled.div`
       height: 300px;
     }
   }
-
-  /* @media (max-width: 768px) {
-    margin: 30px 0 0 0;
-    width: 90%;
-    justify-content: space-between;
-
-    flex-direction: column;
-  } */
 `;
 
 export const Values = styled.section`
   width: 100%;
-  margin: 125px 0;
+  margin: 125px 0 0 0;
   padding: 110px 0;
 
   background: var(--gray-bg);
-
-  @media (max-width: 768px) {
-    padding: 60px 0;
-  }
 `;
 
 export const ValuesWrapper = styled.div`
