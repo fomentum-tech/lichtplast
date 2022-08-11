@@ -53,7 +53,7 @@ const FontsStyles = createGlobalStyle`
           url('Nexa-XBold.woff') format('woff'),
           url('Nexa-XBold.ttf') format('truetype'),
           url('Nexa-XBold.svg#Nexa-XBold') format('svg');
-      font-weight: bold;
+      font-weight: 800;
       font-style: normal;
       font-display: swap;
   }
