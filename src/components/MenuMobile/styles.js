@@ -49,8 +49,8 @@ export const Container = styled.div`
 
         a {
           text-align: end;
-          font-family: "Baloo 2";
-          font-weight: 600;
+          font-family: "Nexa";
+          font-weight: 800;
           font-size: 28px;
           text-transform: uppercase;
           cursor: pointer;

@@ -70,8 +70,8 @@ export const Menu = styled.nav`
       }
 
       a {
-        font-family: "Baloo 2";
-        font-weight: 600;
+        font-family: "Nexa";
+        font-weight: 800;
         font-size: 22px;
         text-transform: uppercase;
         cursor: pointer;
