@@ -188,7 +188,7 @@ export default function Home() {
 
               <ValuesCard>
                 <ValuesCardIcon>
-                  <img src="/images/icon-list.png" alt="icon list" />
+                  <img src="/images/icon-list.svg" alt="icon list" />
                 </ValuesCardIcon>
                 <div>
                   <strong>Segmentos</strong>
