@@ -288,10 +288,14 @@ export const AboutImages = styled.div`
 
 export const Values = styled.section`
   width: 100%;
-  margin-top: 125px;
+  margin: 125px 0;
   padding: 110px 0;
 
   background: var(--gray-bg);
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
 `;
 
 export const ValuesWrapper = styled.div`
@@ -448,6 +452,10 @@ export const Contact = styled.section`
   @media (max-width: 1120px) {
     flex-direction: column;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 125px;
+  }
 `;
 
 export const ContactInfo = styled.div`
@@ -560,6 +568,7 @@ export const FooterContent = styled.div`
       align-items: center;
       text-align: center;
       align-content: center;
+      margin-top: -30px;
     }
 
     &:last-child {
