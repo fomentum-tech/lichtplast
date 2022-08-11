@@ -48,7 +48,7 @@ export default function Home() {
       <MenuMobile />
 
       <Hero>
-        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 6000 }}>
+        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 3000 }}>
           <SwiperSlide>
             <HeroBg bg="/images/bg-01.jpg" />
           </SwiperSlide>
