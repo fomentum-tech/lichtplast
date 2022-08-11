@@ -247,6 +247,8 @@ export default function Home() {
                 R. Azuma - Centro Industrial Rafael Diniz Bragança Paulista -
                 SP, 12919-586
               </p>
+              
+              <a href="https://website-fomentum-tech.vercel.app/" target="_blank">fomentum:tech</a>
             </div>
           </FooterContent>
         </FooterWrapper>
