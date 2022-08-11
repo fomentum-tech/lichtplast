@@ -28,19 +28,18 @@ export const HeroContainer = styled.div`
 export const HeroWrapper = styled.div`
   width: 90%;
   max-width: 1120px;
+  height: 83%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   margin: 57px auto 0;
 
   @media (max-width: 768px) {
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 `;
 
 export const HeroHeader = styled.header`
-  margin-bottom: 210px;
   display: flex;
   justify-content: space-between;
 
@@ -123,20 +122,11 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroDetails = styled.div`
-  width: 90%;
+  width: 100%;
   max-width: 1120px;
   height: 3px;
   background: var(--blue);
   border-radius: 0 2px 2px 0;
-
-  position: absolute;
-  bottom: 71px;
-
-  @media (max-width: 768px) {
-    position: initial;
-    margin-bottom: -90px;
-    width: 100%;
-  }
 
   div {
     border-radius: 2px 0 0 2px;
