@@ -7,8 +7,6 @@ export const Container = styled.div`
   display: none;
   z-index: 1000;
 
-  transition: all 0.8s;
-
   @media (max-width: 899px) {
     display: inherit;
   }
