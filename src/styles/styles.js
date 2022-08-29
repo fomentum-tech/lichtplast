@@ -576,7 +576,7 @@ export const FooterContent = styled.div`
     }
 
     p {
-      max-width: 344px;
+      max-width: 450px;
       font-family: "Graphik";
       font-weight: 400;
       font-size: 18px;

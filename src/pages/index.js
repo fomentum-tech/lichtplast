@@ -91,7 +91,7 @@ export default function Home() {
             </HeroHeader>
 
             <HeroContent>
-              <p>Mais de 28 anos de experiência em soluções termóplasticas</p>
+              <p>Mais de 12 anos de experiência em soluções termóplasticas</p>
             </HeroContent>
             <HeroDetails>
               <div></div>
@@ -103,14 +103,8 @@ export default function Home() {
       <Main>
         <About>
           <AboutContent>
-            <h1>
-              Nós somos a <img src="/images/logo-dark.svg" alt="lichtplast" />
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci
-              nulla pellentesque dignissim enim sit amet venenatis urna.
-            </p>
+            <h1>Desde 2010 injetando muito mais que plásticos</h1>
+            <p>Qualidade compromisso e seriedade</p>
             <Link
               type="button"
               to="contact"
@@ -197,16 +191,15 @@ export default function Home() {
           <EnterpriseContent>
             <h2>A Empresa</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-              porttitor eget dolor morbi non arcu risus quis varius.
+              Somos uma empresa direcionada a uma relação parceira, transparente
+              e profissional com colaboradores, fornecedores e clientes.
             </p>
             <p>
-              Elementum curabitur vitae nunc sed velit. Dolor sed viverra ipsum
-              nunc aliquet bibendum enim facilisis gravida. Sit amet consectetur
-              adipiscing elit. Egestas purus viverra accumsan in nisl. Ut etiam
-              sit amet nisl. Bibendum arcu vitae elementum curabitur vitae
-              nunc.Amet porttitor eget dolor morbi non arcu risus quis varius.{" "}
+              Com investimento em treinamento e tecnologia, utilizamos um
+              Sistema de Gestão de Qualidade que nos permite implementar,
+              documentar, registrar e acompanhar continuamente o processo
+              produtivo, garantindo produtos que atendam as necessidades de
+              nossos clientes.
             </p>
           </EnterpriseContent>
         </Enterprise>
@@ -220,9 +213,7 @@ export default function Home() {
               para tirar suas dúvidas, solicitar catálogos ou orçamentos
             </p>
 
-            <a href="mailto:contato@lichtplast.com.br">
-              contato@lichtplast.com.br
-            </a>
+            <a href="mailto:adm@lichtplast.com.br">adm@lichtplast.com.br</a>
           </ContactInfo>
 
           <ContactForm />
@@ -232,9 +223,10 @@ export default function Home() {
       <Footer>
         <FooterWrapper>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.9839379900322!2d-46.51617798448248!3d-22.95081864521492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceb79fdd8c7e4d%3A0x8b568c5128c71fc2!2sLichtPlast%20Ind%20e%20Com%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1659723142091!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.9804390949485!2d-46.5140214!3d-22.950947499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceb61e647d620d%3A0x41cd4f6cd2104fa!2sRua%20Sumika%20Aoki%2C%20487%20-%20Centro%20Industrial%20Rafael%20Diniz%2C%20Bragan%C3%A7a%20Paulista%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1661809799137!5m2!1spt-BR!2sbr"
             allowFullScreen=""
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
 
           <FooterContent>
@@ -244,8 +236,8 @@ export default function Home() {
             </div>
             <div>
               <p>
-                R. Azuma - Centro Industrial Rafael Diniz Bragança Paulista -
-                SP, 12919-586
+                Rua Sumika Aoki, 487 - Centro Industrial Rafael Diniz, Bragança
+                Paulista - SP, 12929-583
               </p>
               <a href="https://website-jcce81s9q-fomentum-tech.vercel.app/">
                 fomentum.studio
