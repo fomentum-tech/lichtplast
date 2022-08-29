@@ -46,13 +46,13 @@ const FontsStyles = createGlobalStyle`
 
   @font-face {
       font-family: 'Nexa';
-      src: url('Nexa-XBold.eot') format("opentype");
-      src: url('Nexa-XBold.eot');
-      src: url('Nexa-XBold.eot?#iefix') format('embedded-opentype'),
-          url('Nexa-XBold.woff2') format('woff2'),
-          url('Nexa-XBold.woff') format('woff'),
-          url('Nexa-XBold.ttf') format('truetype'),
-          url('Nexa-XBold.svg#Nexa-XBold') format('svg');
+      src: url('/fonts/Nexa-XBold.eot') format("opentype");
+      src: url('/fonts/Nexa-XBold.eot');
+      src: url('/fonts/Nexa-XBold.eot?#iefix') format('embedded-opentype'),
+          url('/fonts/Nexa-XBold.woff2') format('woff2'),
+          url('/fonts/Nexa-XBold.woff') format('woff'),
+          url('/fonts/Nexa-XBold.ttf') format('truetype'),
+          url('/fonts/Nexa-XBold.svg#Nexa-XBold') format('svg');
       font-weight: 800;
       font-style: normal;
       font-display: swap;

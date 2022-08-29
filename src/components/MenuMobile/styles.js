@@ -38,11 +38,12 @@ export const Container = styled.div`
       justify-content: center;
       flex-direction: column;
       align-items: flex-end;
-      text-align: center;
+      text-align: right;
 
       li {
         width: 100%;
         list-style-type: none;
+        
         & + li {
           margin-top: 40px;
         }
@@ -51,7 +52,7 @@ export const Container = styled.div`
           text-align: end;
           font-family: "Nexa";
           font-weight: 800;
-          font-size: 28px;
+          font-size: 22px;
           text-transform: uppercase;
           cursor: pointer;
 

@@ -48,7 +48,7 @@ export default function Home() {
       <MenuMobile />
 
       <Hero>
-        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 6000 }}>
+        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 3000 }}>
           <SwiperSlide>
             <HeroBg bg="/images/bg-01.jpg" />
           </SwiperSlide>
@@ -239,9 +239,8 @@ export default function Home() {
                 Rua Sumika Aoki, 487 - Centro Industrial Rafael Diniz, Bragança
                 Paulista - SP, 12929-583
               </p>
-              <a href="https://website-jcce81s9q-fomentum-tech.vercel.app/">
-                fomentum.studio
-              </a>
+              
+              <a href="https://website-fomentum-tech.vercel.app/" target="_blank" rel="noreferrer">fomentum:tech</a>
             </div>
           </FooterContent>
         </FooterWrapper>

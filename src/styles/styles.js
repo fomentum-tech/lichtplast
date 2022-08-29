@@ -72,7 +72,7 @@ export const Menu = styled.nav`
       a {
         font-family: "Nexa";
         font-weight: 800;
-        font-size: 22px;
+        font-size: 18px;
         text-transform: uppercase;
         cursor: pointer;
 
@@ -402,6 +402,7 @@ export const EnterpriseContent = styled.div`
     font-family: "Nexa";
     font-weight: 900;
     font-size: 32px;
+    text-transform: uppercase;
 
     color: var(--white);
   }
