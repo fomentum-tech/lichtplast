@@ -213,7 +213,9 @@ export default function Home() {
               para tirar suas dúvidas, solicitar catálogos ou orçamentos
             </p>
 
-            <a href="mailto:adm@lichtplast.com.br">adm@lichtplast.com.br</a>
+            <a href="mailto:contato@lichtplast.com.br ">
+              contato@lichtplast.com.br
+            </a>
           </ContactInfo>
 
           <ContactForm />
@@ -239,8 +241,14 @@ export default function Home() {
                 Rua Sumika Aoki, 487 - Centro Industrial Rafael Diniz, Bragança
                 Paulista - SP, 12929-583
               </p>
-              
-              <a href="https://website-fomentum-tech.vercel.app/" target="_blank" rel="noreferrer">fomentum:tech</a>
+
+              <a
+                href="https://website-fomentum-tech.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                fomentum:tech
+              </a>
             </div>
           </FooterContent>
         </FooterWrapper>

@@ -1,9 +1,15 @@
 import { Form, FormGroup, FormMessage } from "./styles";
 
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import { useState } from "react";
+import { MessageErrorForm } from "./styles";
+
+import sendEmail from "../../pages/api/contact";
 
 export default function ContactForm() {
+  const [errorForm, setErrorForm] = useState(false);
+  const [messageSend, setMessageSend] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -11,20 +17,28 @@ export default function ContactForm() {
     reset,
   } = useForm();
 
-  async function onSubmitForm(values) {
-    try {
-      await fetch("http://localhost:3000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
+  function onSubmitForm(values) {
+    fetch("./api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        reset();
+        setErrorForm(false);
+        setMessageSend(true);
+        console.log("Formulário enviado com sucesso!");
+      })
+      .catch((err) => {
+        setMessageSend(false);
+        setErrorForm(true);
+        console.log("Meu erro", err);
       });
-      reset();
-      console.log("Formulário enviado com sucesso!");
-    } catch (err) {
-      console.log(err);
-    }
   }
 
   return (
@@ -81,6 +95,16 @@ export default function ContactForm() {
           <button type="submit" value="Send">
             Enviar
           </button>
+          {errorForm && (
+            <MessageErrorForm>
+              Não foi possível enviar sua mensagem, tente novamente!
+            </MessageErrorForm>
+          )}
+          {messageSend ? (
+            <MessageErrorForm color="green">
+              Mensagem enviada com sucesso!
+            </MessageErrorForm>
+          ) : null}
         </div>
       </Form>
     </>

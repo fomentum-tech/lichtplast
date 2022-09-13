@@ -112,3 +112,15 @@ export const FormMessage = styled.div`
     line-height: 18px;
   }
 `;
+
+export const MessageErrorForm = styled.p`
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 2px;
+  font-family: "Graphik";
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: ${(props) => props.color || "red"};
+  background: var(--gray-bg);
+`;
