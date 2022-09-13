@@ -1,33 +1,26 @@
-import nodemailer from "nodemailer";
+import sendgrid from "@sendgrid/mail";
+
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (req, res) => {
-  const { user_name, user_email, user_message } = req.body;
-
-  const transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    auth: {
-      user: process.env.user,
-      pass: process.env.pass,
-    },
-  });
-
   try {
-    const email = await transporter.sendMail({
-      from: user_email,
-      to: "testedavysonemail@gmail.com",
-      subject: `Mensagem de contato - ${user_name}`,
-      html: `
-      <p>Você tem um novo envio de formulário de contato</p><br>
-      <p><strong>Nome: </strong> ${user_name} </p><br>
-      <p><strong>Mensagem: </strong> ${user_message} </p><br>
-      `,
-    });
+    console.log("REQ.BODY", req.body);
+    const { user_email, user_name, user_message } = req.body;
 
-    console.log("Mensagem enviada", email.messageId);
-  } catch (err) {
-    console.log(err);
+    const msg = {
+      to: user_email,
+      from: "davysonwss@hotmail.com",
+      subject: "Formulário de Contato - Lichtplast",
+      html: `<p>Você tem um novo envio de formulário de contato</p><br>
+      <p><strong>Nome: </strong>${user_name}</p><br>
+      <p><strong>Mensagem: </strong>${user_message}</p><br>`,
+    };
+
+    console.log(sendgrid);
+
+    await sendgrid.send(msg);
+    res.json({ sucess: true });
+  } catch (error) {
+    return res.status(error.statusCode || 500).json(error);
   }
-
-  res.status(200).json(req.body);
 };

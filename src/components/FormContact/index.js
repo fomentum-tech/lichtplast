@@ -12,21 +12,16 @@ export default function ContactForm() {
   } = useForm();
 
   async function onSubmitForm(values) {
-    const config = {
-      method: "post",
-      url: `${process.env.NEXT_PUBLIC_URL}/api/contact`,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: values,
-    };
-
     try {
-      const res = await axios(config);
-
-      if (res.status == 200) {
-        reset();
-      }
+      await fetch("http://localhost:3000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      reset();
+      console.log("Formulário enviado com sucesso!");
     } catch (err) {
       console.log(err);
     }
