@@ -7,8 +7,8 @@ sendgrid.setApiKey(
 export default async (req, res) => {
   const { user_email, user_name, user_message } = req.body;
   const msg = {
-    to: "davysonwss@gmail.com",
-    from: "davysonwss@hotmail.com",
+    to: "lichtplast@gmail.com",
+    from: "lichtplast@gmail.com",
     subject: "Formulário de Contato - Lichtplast",
     html: `<p>Você tem um novo envio de formulário de contato</p><br>
     <p><strong>Email: </strong>${user_email}</p><br>
